@@ -13,6 +13,9 @@
 #ifndef    LIBFT_H
 # define    LIBFT_H
 
+# include <stdlib.h>
+# include <unistd.h>
+
 int	ft_atoi(int c);
 int	ft_bzero(int c);
 int	ft_calloc(int c);
@@ -21,7 +24,7 @@ int	ft_isalpha(int c);
 int	ft_isascii(int c);
 int	ft_isdigit(int c);
 int	ft_isprint(int c);
-int	ft_itoa(int c);
+char	ft_itoa(int c);
 int	ft_lstadd_back(int c);
 int	ft_lstadd_front(int c);
 int	ft_lstclear(int c);
@@ -47,7 +50,7 @@ int	ft_striteri(int c);
 int	ft_strjoin(int c);
 int	ft_strlcat(int c);
 int	ft_strlcpy(int c);
-int	ft_strlen(int c);
+size_t	ft_strlen(int c);
 int	ft_strmapi(int c);
 int	ft_strncmp(int c);
 int	ft_strnstr(int c);
