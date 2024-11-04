@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-int	ft_atoi(int c);
+int	ft_atoi(char *str);
 int	ft_bzero(int c);
 int	ft_calloc(int c);
 int	ft_isalnum(int c);
