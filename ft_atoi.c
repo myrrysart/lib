@@ -6,15 +6,28 @@
 /*   By: Jyniemit <jyniemit@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:52:10 by Jyniemit          #+#    #+#             */
-/*   Updated: 2024/11/04 12:52:32 by Jyniemit         ###   ########.fr       */
+/*   Updated: 2024/11/11 13:26:49 by Jyniemit         ###   ########.fr       */
 /*                                                                            */
+/* ************************************************************************** */
+/* ************************************************************************** */
+/*   ft_atoi                                                                  */
+/* ------------------------------------------------------------------------- */
+/*   PROTO: int ft_atoi(const char *str)                                     */
+/*   PARAM: str   -> string containing number to convert                     */
+/*   RETUN: converted integer value                                          */
+/*   DESC:  converts ASCII string to integer, handling whitespace and sign   */
+/*   ERROR: !undefined behavior if str is NULL                               */
+/*          !no overflow checking (implementation defined behavior)          */
+/*          !returns 0 for invalid number strings                           */
+/*          !implementation defined for values outside INT_MIN/MAX           */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static	int	ft_iswhitespace(int c)
 {
-	if (c == ' ' || c == '\t' || c == '\n' || c == '\f' || c == '\v')
+	if (c == ' ' || c == '\t' || c == '\n' 
+		|| c == '\f' || c == '\v' || c == '\r')
 		return (1);
 	return (0);
 }
@@ -32,15 +45,15 @@ int	ft_atoi(char *str)
 		i++;
 	if (str[i] == '-')
 	{
-		sign *= -sign;
+		sign = -1;
 		i++;
 	}
 	else if (str[i] == '+')
 		i++;
 	while(ft_isdigit((int) str[i]))
 	{
-		res = res * 10;
-		res += str[i] - '0';
+		res = res * 10 + (str[i] - '0');
+		i++;
 	}
 	return (res * sign);
 }
