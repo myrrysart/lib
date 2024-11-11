@@ -6,7 +6,7 @@
 /*   By: Jyniemit <jyniemit@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 12:55:38 by Jyniemit          #+#    #+#             */
-/*   Updated: 2024/11/11 12:55:44 by Jyniemit         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:50:55 by Jyniemit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /* ************************************************************************** */
@@ -22,3 +22,15 @@
 /*          !comparison stops at first null byte even if n not reached       */
 /*          !returns 0 if n=0 regardless of strings                          */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+int ft_strcmp(const char *s1, const char *s2, size_t n)
+{
+	int	i;
+
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] != s2[i] && n--)
+		i++;
+	return (s1[i] - s2[i]);
+}
