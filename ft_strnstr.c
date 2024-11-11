@@ -6,7 +6,7 @@
 /*   By: Jyniemit <jyniemit@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 12:55:57 by Jyniemit          #+#    #+#             */
-/*   Updated: 2024/11/11 12:56:14 by Jyniemit         ###   ########.fr       */
+/*   Updated: 2024/11/11 17:03:26 by Jyniemit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /* ************************************************************************** */
@@ -22,3 +22,19 @@
 /*          !returns hay if ndl is empty string                             */
 /*          !will not find matches if len < needle length                    */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strnstr(const char *hay, const char *ndl, size_t len)
+{
+	int	i;
+
+	i = 0;
+	while (hay[i] && len)
+	{
+		if (ft_strcmp(&hay[i], ndl, len))
+			return (&hay[i])
+		len--;
+		i++;
+	}
+}
