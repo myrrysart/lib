@@ -11,15 +11,15 @@
 /* ************************************************************************** */
 /* ************************************************************************** */
 /*   ft_atoi                                                                  */
-/* ------------------------------------------------------------------------- */
-/*   PROTO: int ft_atoi(const char *str)                                     */
-/*   PARAM: str   -> string containing number to convert                     */
-/*   RETUN: converted integer value                                          */
-/*   DESC:  converts ASCII string to integer, handling whitespace and sign   */
-/*   ERROR: !undefined behavior if str is NULL                               */
-/*          !no overflow checking (implementation defined behavior)          */
-/*          !returns 0 for invalid number strings                           */
-/*          !implementation defined for values outside INT_MIN/MAX           */
+/* -------------------------------------------------------------------------- */
+/*   PROTO: int ft_atoi(const char *str)                                      */
+/*   PARAM: str   -> string containing number to convert                      */
+/*   RETUN: converted integer value                                           */
+/*   DESC:  converts ASCII string to integer, handling whitespace and sign    */
+/*   ERROR: !undefined behavior if str is NULL                                */
+/*          !no overflow checking (implementation defined behavior)           */
+/*          !returns 0 for invalid number strings                             */
+/*          !implementation defined for values outside INT_MIN/MAX            */
 /* ************************************************************************** */
 
 #include "libft.h"

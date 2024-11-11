@@ -6,7 +6,7 @@
 /*   By: Jyniemit <jyniemit@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:45:26 by Jyniemit          #+#    #+#             */
-/*   Updated: 2024/11/11 13:05:31 by Jyniemit         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:41:48 by Jyniemit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /* ************************************************************************** */
@@ -27,8 +27,10 @@ char	*ft_itoa(int n)
 {
 	char	*ptr;
 	char	*res;
+	int		len;
 
-	//allocate initial memory
+	ptr = NULL;
+	res = NULL;
+	len = 0;
 	if ( n < 0 )
-
-}
+		len = 1;
