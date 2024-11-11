@@ -9,6 +9,16 @@
 /*   Updated: 2024/10/31 15:05:45 by Jyniemit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/* ************************************************************************** */
+/*   ft_isprint                                                               */
+/* ------------------------------------------------------------------------- */
+/*   PROTO: int ft_isprint(int c)                                            */
+/*   PARAM: c     -> character to test                                       */
+/*   RETUN: 1 if character is printable (32-126), 0 if not                  */
+/*   DESC:  checks if character is visible/printable, for display logic      */
+/*   ERROR: !undefined behavior with values outside unsigned char range       */
+/*          !does not consider extended ASCII printable characters           */
+/* ************************************************************************** */
 
 int	ft_isprint(int c)
 {

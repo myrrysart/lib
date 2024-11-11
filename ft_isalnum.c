@@ -9,7 +9,16 @@
 /*   Updated: 2024/10/31 14:59:11 by Jyniemit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/* ************************************************************************** */
+/*   ft_isalnum                                                               */
+/* ------------------------------------------------------------------------- */
+/*   PROTO: int ft_isalnum(int c)                                            */
+/*   PARAM: c     -> character to test                                       */
+/*   RETUN: 1 if character is alphanumeric (A-Z, a-z, 0-9), 0 if not        */
+/*   DESC:  combines isalpha and isdigit checks for input validation         */
+/*   ERROR: !undefined behavior with values outside unsigned char range       */
+/*          !implementation may vary with different locale settings          */
+/* ************************************************************************** */
 int	ft_isalnum(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
