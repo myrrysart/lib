@@ -6,13 +6,13 @@
 /*   By: Jyniemit <jyniemit@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 15:10:35 by Jyniemit          #+#    #+#             */
-/*   Updated: 2024/10/31 15:11:55 by Jyniemit         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:13:53 by Jyniemit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		return (c + 32);
+		return (c - 32);
 	return (c);
 }
