@@ -18,7 +18,7 @@
 # include <limits.h>
 
 int	ft_atoi(char *str);
-int	ft_bzero(int c);
+void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 int	ft_isalnum(int c);
 int	ft_isalpha(int c);
