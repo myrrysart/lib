@@ -31,6 +31,8 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	i = 0;
 	tmp = b;
+	if (!len)
+		return (b);
 	while (i < len)
 		tmp[i++] = (unsigned char)c;
 	return (b);
