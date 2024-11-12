@@ -39,7 +39,7 @@ int	ft_memchr(int c);
 int	ft_memcmp(int c);
 int	ft_memcpy(int c);
 int	ft_memmove(int c);
-int	ft_memset(int c);
+void	*ft_memset(void *b, int c, size_t len);
 int	ft_putchar_fd(int c);
 int	ft_putendl_fd(int c);
 int	ft_putnbr_fd(int c);
