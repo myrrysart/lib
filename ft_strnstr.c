@@ -30,9 +30,11 @@ char	*ft_strnstr(const char *hay, const char *ndl, size_t len)
 	int	i;
 
 	i = 0;
+	if (*ndl == '\0')
+		return (hay);
 	while (hay[i] && len)
 	{
-		if (ft_strcmp(&hay[i], ndl, len))
+		if (ft_strncmp(&hay[i], ndl, len))
 			return (&hay[i])
 		len--;
 		i++;
