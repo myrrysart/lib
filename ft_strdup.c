@@ -20,3 +20,13 @@
 /*          !returns NULL if memory allocation fails                         */
 /*          !no protection against strings longer than SIZE_MAX - 1          */
 /* ************************************************************************** */
+
+char	*ft_strdub(const char *s1)
+{
+	int		len;
+	char	*dup;
+
+	dup = NULL;
+	len = ft_strlen(s1);
+	dup = ft_calloc
+}
