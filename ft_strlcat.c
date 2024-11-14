@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 /* ************************************************************************** */
 /*   ft_strlcat                                                               */
-/* -------------------------------------------------------------------------- */
-/*   PROTO: size_t ft_strlcat(char *dst, const char *src, size_t dstsize)     */
-/*   PARAM: dst     -> destination string buffer                              */
+/* ------------------------------------------------------------------------- */
+/*   PROTO: size_t ft_strlcat(char *dst, const char *src, size_t dstsize)   */
+/*   PARAM: dst     -> destination string buffer                               */
 /*          src     -> string to concatenate                                  */
 /*          dstsize -> size of destination buffer                             */
 /*   RETUN: intended total length (initial dst len + src len)                 */
@@ -27,9 +27,9 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t srclen;
-	size_t dstlen;
-	size_t i;
+	size_t	srclen;
+	size_t	dstlen;
+	size_t	i;
 
 	srclen = ft_strlen(src);
 	dstlen = ft_strlen(dst);
