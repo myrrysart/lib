@@ -34,3 +34,5 @@ char	*ft_itoa(int n)
 	len = 0;
 	if ( n < 0 )
 		len = 1;
+	return (res);
+}
