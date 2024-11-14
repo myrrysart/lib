@@ -23,3 +23,9 @@
 /*          !requires counting splits before allocation                      */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+char	**ft_split(char const *s, char c)
+{
+
+}
