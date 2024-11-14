@@ -21,6 +21,8 @@
 /*          !no protection against strings longer than SIZE_MAX - 1          */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strdub(const char *s1)
 {
 	int		len;
@@ -28,5 +30,8 @@ char	*ft_strdub(const char *s1)
 
 	dup = NULL;
 	len = ft_strlen(s1);
-	dup = ft_calloc
+	dup = ft_calloc(len, sizeof(char));
+	if (!dup)
+		return (NULL);
+	return (dup);
 }
