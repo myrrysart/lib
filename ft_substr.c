@@ -23,6 +23,15 @@
 /*          !might allocate less than len if s is shorter                     */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	char	*res;
+
+	res = NULL;
+	(void)s;
+	(void)start;
+	(void)len;
+	return (res);
 }
