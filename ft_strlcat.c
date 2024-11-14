@@ -22,3 +22,24 @@
 /*          !if dstsize <= strlen(dst), returns dstsize + strlen(src)      */
 /*          !truncation occurs if combined length >= dstsize                */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
+	size_t srclen;
+	size_t dstlen;
+	size_t i;
+
+	srclen = ft_strlen(src);
+	dstlen = ft_strlen(dst);
+	i = 0;
+	if (dstlen >= dstsize)
+		return(dstsize + srclen);
+	while(dstlen + i < dstsize && src[i])
+	{
+		dst[dstlen + i] = src[i];
+	}
+	dst[dstlen + i] = '\0';
+	return (dstlen + srclen);
+}
