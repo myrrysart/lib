@@ -31,12 +31,13 @@ char	*ft_strnstr(const char *hay, const char *ndl, size_t len)
 
 	i = 0;
 	if (*ndl == '\0')
-		return (hay);
+		return ((char *)hay);
 	while (hay[i] && len)
 	{
 		if (ft_strncmp(&hay[i], ndl, len))
-			return (&hay[i])
+			return ((char *)&hay[i]);
 		len--;
 		i++;
 	}
+	return (NULL);
 }
