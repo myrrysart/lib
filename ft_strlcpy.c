@@ -22,3 +22,20 @@
 /*          !if dstsize=0, dst is not modified                             */
 /*          !truncation occurs if src length >= dstsize                     */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+{
+	size_t res;
+
+	res = ft_strlen(src);
+	if(res + 1 < dstsize)
+		ft_memcpy(dst, src, res + 1);
+	else if (dstsize)
+	{
+		ft_memcpy(dst, src, dstsize - 1);
+		dst[dstsize - 1] = '\0';
+	}
+	return (res);
+}
