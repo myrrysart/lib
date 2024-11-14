@@ -45,7 +45,7 @@ int	ft_putendl_fd(int c);
 int	ft_putnbr_fd(int c);
 int	ft_putstr_fd(int c);
 int	ft_split(int c);
-int	ft_strchr(int c);
+char	*ft_strchr(const char *s, int c);
 int	ft_strdup(int c);
 int	ft_striteri(int c);
 int	ft_strjoin(int c);
