@@ -11,12 +11,28 @@
 /* ************************************************************************** */
 /* ************************************************************************** */
 /*   ft_strchr                                                                */
-/* ------------------------------------------------------------------------- */
-/*   PROTO: char *ft_strchr(const char *s, int c)                           */
-/*   PARAM: s     -> string to search in                                    */
-/*          c     -> character to find (converted to char)                  */
-/*   RETUN: pointer to first occurrence of c, or NULL if not found          */
-/*   DESC:  locates character in string, including null terminator          */
-/*   ERROR: !undefined behavior if s is NULL                                */
-/*          !searching for '\0' returns pointer to string end               */
+/* -------------------------------------------------------------------------- */
+/*   PROTO: char *ft_strchr(const char *s, int c)                             */
+/*   PARAM: s     -> string to search in                                      */
+/*          c     -> character to find (converted to char)                    */
+/*   RETUN: pointer to first occurrence of c, or NULL if not found            */
+/*   DESC:  locates character in string, including null terminator            */
+/*   ERROR: !undefined behavior if s is NULL                                  */
+/*          !searching for '\0' returns pointer to string end                 */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strchr(const char *s, int c)
+{
+	unsigned int	i;
+	while (s[i])
+	{
+		if (s[i] == c)
+			return ((char *)&s[i]);
+		i++;
+	}
+	if (s[i] == c)
+		return ((char *)&s[i]);
+	return (NULL);
+}
