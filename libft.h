@@ -49,7 +49,7 @@ int	ft_strchr(int c);
 int	ft_strdup(int c);
 int	ft_striteri(int c);
 int	ft_strjoin(int c);
-int	ft_strlcat(int c);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);
 int	ft_strmapi(int c);
