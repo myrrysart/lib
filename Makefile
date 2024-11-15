@@ -14,6 +14,8 @@ NAME = libft.a
 FLAGS = -Wall -Wextra -Werror
 SRCS = $(filter-out ft_lst%, $(wildcard ft_*.c))
 OBJS = $(SRCS:.c=.o) 
+BONUS_SRCS = $(wildcard ft_lst*.c)
+BONUS_OBJS = $(BONUS_SRCS:.c=.o) 
 
 all: $(NAME)
 
