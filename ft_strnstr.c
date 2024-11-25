@@ -28,15 +28,17 @@
 char	*ft_strnstr(const char *hay, const char *ndl, size_t len)
 {
 	int	i;
+	int	to_search;
 
 	i = 0;
+	to_search = len;
 	if (*ndl == '\0')
 		return ((char *)hay);
-	while (hay[i] && len)
+	while (hay[i] && to_search)
 	{
 		if (ft_strncmp(&hay[i], ndl, len))
 			return ((char *)&hay[i]);
-		len--;
+		to_search--;
 		i++;
 	}
 	return (NULL);
