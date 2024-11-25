@@ -22,15 +22,23 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(BONUS_OBJS)
+bonus: .bonus
+
+.bonus: $(OBJS) $(BONUS_OBJS)
 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+	touch .bonus
 
 %.o: %.c
 	cc $(FLAGS) -c $< -o $@
+
 clean:
-	rm *.o
+	rm -f *.o
+	rm -f .bonus
+
 fclean: clean
 	rm $(NAME)
+
 re: fclean
 	$(MAKE) all
-.PHONY: all %.o clean fclean re bonus
+
+.PHONY: all clean fclean re bonus 
