@@ -41,7 +41,7 @@ int	ft_memcmp(int c);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
-int	ft_putchar_fd(int c);
+void	ft_putchar_fd(char c, int fd);
 int	ft_putendl_fd(int c);
 int	ft_putnbr_fd(int c);
 int	ft_putstr_fd(int c);
