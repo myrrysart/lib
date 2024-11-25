@@ -19,7 +19,7 @@
 /*   ERROR: !undefined behavior with values outside unsigned char range       */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
