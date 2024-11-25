@@ -41,4 +41,8 @@ fclean: clean
 re: fclean
 	$(MAKE) all
 
+so: $(OBJS)
+	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
+
 .PHONY: all clean fclean re bonus 
