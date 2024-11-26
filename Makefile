@@ -16,15 +16,16 @@ SRCS = $(filter-out ft_lst%, $(wildcard ft_*.c))
 OBJS = $(SRCS:.c=.o) 
 BONUS_SRCS = $(wildcard ft_lst*.c)
 BONUS_OBJS = $(BONUS_SRCS:.c=.o) 
+HEADER = libft.h
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(HEADER)
 	ar rcs $(NAME) $(OBJS)
 
 bonus: .bonus
 
-.bonus: $(OBJS) $(BONUS_OBJS)
+.bonus: $(OBJS) $(BONUS_OBJS) $(HEADER)
 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 	touch .bonus
 
