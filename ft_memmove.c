@@ -24,20 +24,41 @@
 
 #include "libft.h"
 
+static void	normal_memmove(unsigned char *res, unsigned char *source, size_t n)
+{
+	while (n > 0)
+	{
+		*(res++) = *(source++);
+		n--;
+	}
+}
+
+static void reverse_memmove(unsigned char *res, unsigned char *source, size_t n)
+{
+		while (n-- >= 0)
+			res[n] = source[n];
+}
+
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t			i;
 	unsigned char	*res;
 	unsigned char	*source;
-	unsigned char	*tmp;
+	int				normal;
 
 	i = 0;
 	res = (unsigned char *)dst;
 	source = (unsigned char *)src;
-	tmp = ft_calloc(len, sizeof(char));
-	if (!tmp)
-		return(NULL);
-	ft_memcpy(tmp, source, len);
-	ft_memcpy(res, tmp, len);
-	return (res);
+	normal = 1;
+	while (i < len)
+	{
+		if (&source[i] == res)
+			normal = 0;
+		i++;
+	}	
+	if (normal)
+		normal_memmove(res, source, len);
+	else
+		reverse_memmove(res, source, len);
+	return(dst);
 }
