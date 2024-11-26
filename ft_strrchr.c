@@ -21,3 +21,19 @@
 /*          !searching for '\0' returns pointer to string end                 */
 /*          !must scan entire string even if character is found early         */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
+{
+	size_t	len;
+
+	len = ft_strlen(s);
+	if (c == 0)
+		 return ((char *)&s[len]);
+	while (len > 0 && (char)s[len - 1] != (char)c)
+		len--;
+	if (len)
+		return ((char *)&s[len - 1]);
+	return (NULL);
+}
