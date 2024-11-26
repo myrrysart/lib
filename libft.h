@@ -56,7 +56,7 @@ size_t	ft_strlen(const char *s);
 int	ft_strmapi(int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *hay, const char *ndl, size_t len);
-int	ft_strrchr(int c);
+char	*ft_strrchr(const char *s, int c);
 int	ft_strtrim(int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int	ft_tolower(int c);
