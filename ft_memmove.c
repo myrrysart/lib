@@ -28,16 +28,16 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t			i;
 	unsigned char	*res;
-	unsigned char	*sta;
+	unsigned char	*source;
 	unsigned char	*tmp;
 
 	i = 0;
 	res = (unsigned char *)dst;
-	sta = (unsigned char *)src;
-	tmp = malloc(len);
+	source = (unsigned char *)src;
+	tmp = ft_calloc(len, sizeof(char));
 	if (!tmp)
 		return(NULL);
-	ft_memcpy(tmp, sta, len);
+	ft_memcpy(tmp, source, len);
 	ft_memcpy(res, tmp, len);
 	return (res);
 }
