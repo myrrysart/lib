@@ -27,7 +27,6 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t			i;
 	unsigned char	*res;
 	unsigned char	*source;
 
@@ -35,11 +34,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	source = (unsigned char *)src;
 	if (!res || !source)
 		return (source);
-	i = 0;
-	while (i < n && source[i])
+	while (n > 0)
 	{
-		res[i] = source[i];
-		i++;
+		*(res++) = *(source++);
+		n--;
 	}
-	return (res);
+	return (dst);
 }
