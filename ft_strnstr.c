@@ -37,7 +37,7 @@ char	*ft_strnstr(const char *hay, const char *ndl, size_t len)
 		return ((char *)hay);
 	if (ndl_len > len)
 		return (NULL);
-	while (hay[i] && len >= ndl_len)
+	while (len >= ndl_len)
 	{
 		if (ft_strncmp(&hay[i], ndl, ndl_len) == 0)
 			return ((char *)&hay[i]);
