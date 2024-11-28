@@ -27,9 +27,5 @@
 
 char	**ft_split(char const *s, char c)
 {
-	(void)s;
-	(void)c;
-	char	**res;
-	res = NULL;
-	return (res);
+	return (NULL);
 }
