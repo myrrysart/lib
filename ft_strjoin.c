@@ -21,4 +21,3 @@
 /*          !no protection against combined length exceeding SIZE_MAX        */
 /*          !allocates exact size needed (strlen(s1) + strlen(s2) + 1)      */
 /* ************************************************************************** */
-

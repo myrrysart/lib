@@ -23,7 +23,7 @@
 
 static	int	ft_iswhitespace(int c)
 {
-	if (c == ' ' || c == '\t' || c == '\n' 
+	if (c == ' ' || c == '\t' || c == '\n'
 		|| c == '\f' || c == '\v' || c == '\r')
 		return (1);
 	return (0);
@@ -38,7 +38,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	res = 0;
-	while(ft_iswhitespace((int) str[i]))
+	while (ft_iswhitespace((int) str[i]))
 		i++;
 	if (str[i] == '-')
 	{
@@ -47,7 +47,7 @@ int	ft_atoi(const char *str)
 	}
 	else if (str[i] == '+')
 		i++;
-	while(ft_isdigit((int) str[i]))
+	while (ft_isdigit((int) str[i]))
 	{
 		res = res * 10 + (str[i] - '0');
 		i++;

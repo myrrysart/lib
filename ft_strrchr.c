@@ -30,7 +30,7 @@ char	*ft_strrchr(const char *s, int c)
 
 	len = ft_strlen(s);
 	if (c == 0)
-		 return ((char *)&s[len]);
+		return ((char *)&s[len]);
 	while (len > 0 && s[len - 1] != c)
 		len--;
 	if (len)

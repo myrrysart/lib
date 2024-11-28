@@ -27,10 +27,10 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t res;
+	size_t	res;
 
 	res = ft_strlen(src);
-	if(res + 1 < dstsize)
+	if (res + 1 < dstsize)
 		ft_memcpy(dst, src, res + 1);
 	else if (dstsize)
 	{

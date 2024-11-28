@@ -21,4 +21,3 @@
 /*          !returns empty string if s1 consists entirely of set chars       */
 /*          !only removes characters from ends, not middle of string         */
 /* ************************************************************************** */
-

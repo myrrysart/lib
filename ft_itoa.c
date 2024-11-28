@@ -32,7 +32,7 @@ char	*ft_itoa(int n)
 	ptr = NULL;
 	res = NULL;
 	len = 0;
-	if ( n < 0 )
+	if (n < 0)
 		len = 1;
 	return (res);
 }
