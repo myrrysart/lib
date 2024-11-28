@@ -29,7 +29,9 @@ char	*ft_strdup(const char *s1)
 	char	*dup;
 
 	dup = NULL;
-	len = ft_strlen(s1);
+	len = ft_strlen(s1) + 1;
+	if (!len)
+		return (NULL);
 	dup = ft_calloc(len, sizeof(char));
 	if (!dup)
 		return (NULL);
