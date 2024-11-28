@@ -25,7 +25,7 @@
 
 char	*ft_strdup(const char *s1)
 {
-	int		len;
+	size_t	len;
 	char	*dup;
 
 	dup = NULL;
