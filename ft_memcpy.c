@@ -32,7 +32,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	res = (unsigned char *)dst;
 	source = (unsigned char *)src;
-	if (!res || !source)
+	if (n && !res && !source)
 		return (dst);
 	while (n > 0)
 	{
