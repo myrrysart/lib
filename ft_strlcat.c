@@ -11,13 +11,13 @@
 /* ************************************************************************** */
 /* ************************************************************************** */
 /*   ft_strlcat                                                               */
-/* ------------------------------------------------------------------------- */
-/*   PROTO: size_t ft_strlcat(char *dst, const char *src, size_t dstsize)   */
-/*   PARAM: dst     -> destination string buffer                               */
+/* -------------------------------------------------------------------------- */
+/*   PROTO: size_t ft_strlcat(char *dst, const char *src, size_t dstsize)     */
+/*   PARAM: dst     -> destination string buffer                              */
 /*          src     -> string to concatenate                                  */
 /*          dstsize -> size of destination buffer                             */
 /*   RETUN: intended total length (initial dst len + src len)                 */
-/*   DESC:  safer string concatenation that ensures null-termination          */
+/*   DESC:  string concatenation with null-termination                        */
 /*   ERROR: !undefined behavior if dst or src is NULL                         */
 /*          !if dstsize <= strlen(dst), returns dstsize + strlen(src)         */
 /*          !truncation occurs if combined length >= dstsize                  */
