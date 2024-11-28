@@ -32,8 +32,6 @@ char	*ft_strnstr(const char *hay, const char *ndl, size_t len)
 
 	i = 0;
 	ndl_len = 0;
-	if (*ndl == '\0')
-		return ((char *)hay);
 	ndl_len = ft_strlen(ndl);
 	if (ndl_len > len)
 		return (NULL);
