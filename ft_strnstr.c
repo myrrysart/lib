@@ -28,18 +28,23 @@
 char	*ft_strnstr(const char *hay, const char *ndl, size_t len)
 {
 	int	i;
-	int	to_search;
+	size_t	ndl_len;
 
 	i = 0;
-	to_search = len;
+	ndl_len = 0;
 	if (*ndl == '\0')
 		return ((char *)hay);
-	while (hay[i] && to_search)
+	ndl_len = ft_strlen(ndl);
+	if(ndl_len > len)
+		return (NULL);
+	while (hay[i] && len >= ndl_len)
 	{
-		if (ft_strncmp(&hay[i], ndl, len))
+		if (ft_strncmp(&hay[i], ndl, len) == 0)
 			return ((char *)&hay[i]);
-		to_search--;
+		len--;
 		i++;
 	}
 	return (NULL);
 }
+
+
