@@ -21,3 +21,24 @@
 /*          !no protection against combined length exceeding SIZE_MAX        */
 /*          !allocates exact size needed (strlen(s1) + strlen(s2) + 1)      */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	size_t	len;
+	char	*res;
+
+	len = 0;
+	res = NULL;
+	if (!s1 || !s2)
+		return (NULL);
+	len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	res = ft_calloc(len, sizeof(char));
+	if (!res)
+		return (NULL);
+	ft_strlcpy(res, s1, len);
+	ft_strlcpy(&res[ft_strlen(s1)], s2, len - ft_strlen(s1));
+	res[len] = '\0';
+	return (res);
+}
