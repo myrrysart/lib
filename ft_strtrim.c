@@ -21,3 +21,38 @@
 /*          !returns empty string if s1 consists entirely of set chars       */
 /*          !only removes characters from ends, not middle of string         */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+static char const	*ft_strcheckset(char const *s1, char const *set)
+{
+	char const	*set_origin;
+	int		found;
+	int		end;
+
+	found = 1;
+	set_origin = set;
+	end = 0;
+	while (found)
+	{
+		while(*set)
+		{
+			if(*set == *s1)
+			{
+				found = 1;
+				s1++;
+			}
+			else if (end)
+				found = 0;
+		}
+		end = 0;
+		set = set_origin;
+	}
+	return (s1);
+}
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char const	*start;
+
+	start = ft_strcheckset(s1, set)
+}
