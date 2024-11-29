@@ -27,5 +27,25 @@
 
 char	**ft_split(char const *s, char c)
 {
-	return (NULL);
+	char	**res;
+	size_t	height;
+	size_t	i;
+	char	*pos;
+
+	res = NULL;
+	height = 0;
+	i = 0;
+	pos = NULL;
+	while (s[i] != '\0')
+	{
+		 pos = ft_strchr(s, c);
+		if (*pos != '\0')
+			height++;
+		i++;
+	}
+	res = ft_calloc(height, sizeof(char *));
+	if (!res)
+		return (NULL);
+	
+	return (res);
 }
