@@ -28,10 +28,25 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*res;
-
+	size_t	s_len;
+	
 	res = NULL;
-	(void)s;
-	(void)start;
-	(void)len;
+	s_len = 0;
+	if (!s)
+		return (NULL);
+	s_len = ft_strlen(&s[start]);
+	if (ft_strlen(s) <= start)
+	{
+		res = ft_calloc(1, sizeof(char));
+		return (res);
+	}
+	else
+		res = ft_calloc(len + 1, sizeof(char));
+	if (!res)
+		return (NULL);
+	if (s_len < len)
+		len = s_len;
+	ft_memmove(res, &s[start], len);
+	res[len + 1] = '\0';
 	return (res);
 }
