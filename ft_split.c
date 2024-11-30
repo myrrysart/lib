@@ -25,20 +25,45 @@
 
 #include "libft.h"
 
-const size_t	ft_countstrings(char const *s, char c)
+size_t	ft_count_array_height(char const *s, char c)
 {
-	char const	*pos;
 	size_t		i;
-	pos = s;
+	size_t		j;
+	int			count;
+
 	i = 0;
-	while(pos)
+	j = 0;
+	count= 0;
+	while (s[i])
 	{
-		pos = ft_strchr(pos, c);
-		while (*pos == c)
-			pos++;
-		i++;
+		while (s[i] != c && s[i])
+		{
+			i++;
+			count= 1;
+		}
+		if (count)
+		{
+			count = 0;
+			j++;
+		}
+		while (s[i] == c && s[i])
+			i++;
 	}
-	return (i);
+	return (j);
+}
+
+void	ft_save_strings(char **dest, char const *source, char c, size_t count)
+{
+	(void)c;	
+	(void)dest;	
+	(void)source;	
+	(void)count;	
+	char	*pos;
+	size_t	len;
+	size_t	i;
+
+	pos = source;
+	len = 
 }
 char	**ft_split(char const *s, char c)
 {
@@ -53,9 +78,18 @@ char	**ft_split(char const *s, char c)
 	height = 0;
 	if (!pos)
 		return (NULL);
-	height = ft_countstrings(s, c);
+	height = ft_count_array_height(s, c);
 	res = ft_calloc(height, sizeof(char *));
 	if (!res)
 		return (NULL);
+	ft_save_strings(res, s, c, height);
 	return (res);
+}
+
+int	main(void)
+{
+	char const	*str="hello world";
+	char		c = ' ';
+	ft_split(str, c);
+	return (0);
 }
