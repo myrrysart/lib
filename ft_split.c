@@ -48,19 +48,14 @@ char	**ft_split(char const *s, char c)
 	char const	*pos;
 
 	res = NULL;
-	height = 0;
-	i = 0;
 	pos = s;
-	while (s[i] != '\0')
-	{
-		 pos = ft_strchr(s, c);
-		if (pos)
-			height++;
-		i++;
-	}
+	i = 0;
+	height = 0;
+	if (!pos)
+		return (NULL);
+	height = ft_countstrings(s, c);
 	res = ft_calloc(height, sizeof(char *));
 	if (!res)
 		return (NULL);
-	 
 	return (res);
 }
