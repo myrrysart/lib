@@ -48,8 +48,10 @@ re: fclean
 so: $(OBJS)
 	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
 	gcc -nostartfiles -shared -o libft.so $(OBJS)
+TEST_FILE = ft_split
+test: $(filter-out $(TEST_FILE).o, $(OBJS))
+	cc $(FLAGS) -g $(TEST_FILE).c -o test_exe $(filter-out $(TEST_FILE).o, $(OBJS))
 #**********************#
 #     TESTING OVER     #
 #**********************#
-
 .PHONY: all clean fclean re bonus 
