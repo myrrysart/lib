@@ -25,6 +25,21 @@
 
 #include "libft.h"
 
+const size_t	ft_countstrings(char const *s, char c)
+{
+	char const	*pos;
+	size_t		i;
+	pos = s;
+	i = 0;
+	while(pos)
+	{
+		pos = ft_strchr(pos, c);
+		while (*pos == c)
+			pos++;
+		i++;
+	}
+	return (i);
+}
 char	**ft_split(char const *s, char c)
 {
 	char		**res;
