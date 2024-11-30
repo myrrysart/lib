@@ -78,13 +78,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(res, start, res_len + 1);
 	return (res);
 }
-
-#include <stdio.h>
-int	main(void)
-{
-	char	*test1="Testing testing testing!";
-	char	*set="Testing !";
-	
-	printf("|%s| is the string left after testing", ft_strtrim(test1, set));
-	return (0);
-}
