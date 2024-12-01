@@ -23,6 +23,25 @@
 
 #include "libft.h"
 
+static int	ft_getlen(int n)
+{
+	int	i;
+
+	i = 0;
+	if (n < 0)
+	{
+		i++;
+		n *= -1;
+	}
+	while (n != 0)
+	{
+		i++;
+		n /= 10;
+		if (n < 10)
+			n = 0;
+	}
+	return (i);
+}
 static char	*ft_intmin_handler(void)
 {
 	char	*res;
