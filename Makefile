@@ -37,7 +37,7 @@ clean:
 	rm -f .bonus
 
 fclean: clean
-	rm $(NAME)
+	rm -f $(NAME)
 
 re: fclean
 	$(MAKE) all
@@ -57,8 +57,8 @@ test: .test
 	touch .test
 
 tclean: clean
-	rm .test
-	rm .test_exe
+	rm -f .test
+	rm -f .test_exe
 #**********************#
 #     TESTING OVER     #
 #**********************#
