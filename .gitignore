@@ -51,3 +51,4 @@ ft_tolower.o
 ft_toupper.o
 libft.a
 test_exe
+.test
