@@ -65,18 +65,34 @@ int	ft_safe_save(char **dest, char const *source, size_t len, int loc)
 	return (0);
 }
 
+int	ft_save_strings(char **dest, char const *source, char c)
 {
 	(void)c;	
 	(void)dest;	
 	(void)source;	
-	(void)count;	
-	char	*pos;
-	size_t	len;
-	size_t	i;
+	char const	*pos;
+	size_t		len;
+	int			i;
 
 	pos = source;
-	len = 
+	len = 0;
+	i = 0;
+	while (*pos)
+	{
+		len = 0;
+		while(*pos == c && *pos)
+			pos++;
+		while(*pos != c && *pos)
+		{
+			len++;
+			pos++;
+		}
+		if (ft_safe_save(dest, pos - len, len + 1, i++))
+			return (1);
+	}
+	return (0);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char		**res;
@@ -91,17 +107,26 @@ char	**ft_split(char const *s, char c)
 	if (!pos)
 		return (NULL);
 	height = ft_count_array_height(s, c);
-	res = ft_calloc(height, sizeof(char *));
+	res = ft_calloc(height + 1, sizeof(char *));
 	if (!res)
 		return (NULL);
-	ft_save_strings(res, s, c, height);
+	res[height] = NULL;
+	if(ft_save_strings(res, s, c))
+	{
+		free (res);
+		return (NULL);
+	}
 	return (res);
 }
-
-int	main(void)
-{
-	char const	*str="hello world";
-	char		c = ' ';
-	ft_split(str, c);
-	return (0);
-}
+//
+//#include <stdio.h>
+//int	main(void)
+//{
+//	//char const	*str="  hello world and all the people in it!! !! !! Yay!   ";
+//	//char 		*s = "split||this|for|me|||||!|";
+//	char *s = "      split       this for   me  !       ";
+//	char		**v = ft_split(s, ' ');
+//	while (*v)
+//		printf("%s\n", *v++);
+//	return (0);
+//}
