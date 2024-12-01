@@ -48,9 +48,13 @@ re: fclean
 so: $(OBJS)
 	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
 	gcc -nostartfiles -shared -o libft.so $(OBJS)
-TEST_FILE = ft_split
-test: $(filter-out $(TEST_FILE).o, $(OBJS))
+TEST_FILE = ft_itoa
+
+test: .test
+
+.test: $(filter-out $(TEST_FILE).o, $(OBJS))
 	cc $(FLAGS) -g $(TEST_FILE).c -o test_exe $(filter-out $(TEST_FILE).o, $(OBJS))
+	touch .test
 #**********************#
 #     TESTING OVER     #
 #**********************#
