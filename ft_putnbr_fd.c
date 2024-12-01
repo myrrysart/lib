@@ -22,3 +22,15 @@
 /*          !must handle INT_MIN specially                                   */
 /*          !recursive calls could stack up with large numbers               */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	int		len;
+	char	*nbrstr;
+	
+	//nbrstr = ft_itoa(n); allocates memory, no go //
+	len = ft_strlen(nbrstr);
+	write(fd, nbrstr, len);
+}
