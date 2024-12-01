@@ -115,15 +115,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (res);
 }
-//
-//#include <stdio.h>
-//int	main(void)
-//{
-//	//char const	*str="  hello world and all the people in it!! !! !! Yay!   ";
-//	//char 		*s = "split||this|for|me|||||!|";
-//	char *s = "      split       this for   me  !       ";
-//	char		**v = ft_split(s, ' ');
-//	while (*v)
-//		printf("%s\n", *v++);
-//	return (0);
-//}
