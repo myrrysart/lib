@@ -28,28 +28,28 @@
 size_t	ft_count_array_height(char const *s, char c)
 {
 	size_t		i;
-	size_t		j;
+	size_t		result;
 	int			count;
 
 	i = 0;
-	j = 0;
+	result = 0;
 	count= 0;
 	while (s[i])
 	{
-		while (s[i] != c && s[i])
-		{
-			i++;
-			count= 1;
-		}
-		if (count)
-		{
-			count = 0;
-			j++;
-		}
+		count = 1;
 		while (s[i] == c && s[i])
 			i++;
+		while (s[i] != c && s[i])
+		{
+			if (count)
+			{
+				count = 0;
+				result++;
+			}
+			i++;
+		}
 	}
-	return (j);
+	return (result);
 }
 
 void	ft_save_strings(char **dest, char const *source, char c, size_t count)
