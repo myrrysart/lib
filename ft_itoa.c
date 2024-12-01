@@ -37,8 +37,6 @@ static int	ft_getlen(int n)
 	{
 		i++;
 		n /= 10;
-		if (n < 10)
-			n = 0;
 	}
 	return (i);
 }
@@ -50,6 +48,28 @@ static char	*ft_intmin_handler(void)
 	ft_strlcpy(res, "-2147483648", 12);
 	return (res);
 }
+
+static char	*ft_int_parser(char *dest, int n, int len)
+{
+	int	offset;
+
+	offset = 0;
+	dest = malloc(sizeof(char) * (len + 1));
+	if (!dest)
+		return (NULL);
+	if (n < 0)
+	{
+		dest[offset++] = '-';
+		n *= -1;
+	}
+	dest[len] = '\0';
+	while (--len >= offset)
+	{
+		dest[len] = n % 10 + 48;
+		n /= 10;
+	}
+	return (dest);
+}
 char	*ft_itoa(int n)
 {
 	char	*res;
@@ -59,8 +79,29 @@ char	*ft_itoa(int n)
 	if (n == INT_MIN)
 	{
 		res = ft_intmin_handler();
+		if (!res)
+			return (NULL);
+		return (res);
+	}
+	if (n == 0)
+	{
+		res = malloc(sizeof(char) * 2);
+		if(!res)
+			return (NULL);
+		res[0]	= '0';
+		res[1] = '\0';
 		return (res);
 	}
 	len = ft_getlen(n);
+	res = ft_int_parser(res, n, len);
 	return (res);
+}
+
+#include <stdio.h>
+
+int	main(void)
+{
+	int n = -0;
+	printf("test %d, results in |%s| \n", n, ft_itoa(n));
+	return (0);
 }
