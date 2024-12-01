@@ -52,7 +52,19 @@ size_t	ft_count_array_height(char const *s, char c)
 	return (result);
 }
 
-void	ft_save_strings(char **dest, char const *source, char c, size_t count)
+int	ft_safe_save(char **dest, char const *source, size_t len, int loc)
+{
+	dest[loc] = ft_calloc(len, sizeof(char));
+	if (!dest[loc])
+	{
+		while (loc-- >= 0)
+			free(dest[loc]);
+		return (1);
+	}
+	ft_strlcpy(dest[loc], source, len);
+	return (0);
+}
+
 {
 	(void)c;	
 	(void)dest;	
