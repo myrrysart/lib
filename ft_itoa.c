@@ -23,16 +23,25 @@
 
 #include "libft.h"
 
+static char	*ft_intmin_handler(void)
+{
+	char	*res;
+
+	res = malloc(sizeof(char) * 12);
+	ft_strlcpy(res, "-2147483648", 12);
+	return (res);
+}
 char	*ft_itoa(int n)
 {
-	char	*ptr;
 	char	*res;
 	int		len;
 
-	ptr = NULL;
 	res = NULL;
-	len = 0;
-	if (n < 0)
-		len = 1;
+	if (n == INT_MIN)
+	{
+		res = ft_intmin_handler();
+		return (res);
+	}
+	len = ft_getlen(n);
 	return (res);
 }
