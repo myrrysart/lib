@@ -67,9 +67,6 @@ int	ft_safe_save(char **dest, char const *source, size_t len, int loc)
 
 int	ft_save_strings(char **dest, char const *source, char c)
 {
-	(void)c;	
-	(void)dest;	
-	(void)source;	
 	char const	*pos;
 	size_t		len;
 	int			i;
