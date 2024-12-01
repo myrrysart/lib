@@ -55,6 +55,10 @@ test: .test
 .test: $(filter-out $(TEST_FILE).o, $(OBJS))
 	cc $(FLAGS) -g $(TEST_FILE).c -o test_exe $(filter-out $(TEST_FILE).o, $(OBJS))
 	touch .test
+
+tclean: clean
+	rm .test
+	rm .test_exe
 #**********************#
 #     TESTING OVER     #
 #**********************#
