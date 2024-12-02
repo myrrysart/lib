@@ -50,6 +50,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (s_len < len)
 		len = s_len;
 	ft_memmove(res, &s[start], len);
-	res[len + 1] = '\0';
+	res[len] = '\0';
 	return (res);
 }
