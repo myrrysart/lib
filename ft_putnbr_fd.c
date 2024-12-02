@@ -6,7 +6,7 @@
 /*   By: Jyniemit <jyniemit@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 13:08:24 by Jyniemit          #+#    #+#             */
-/*   Updated: 2024/11/11 13:09:06 by Jyniemit         ###   ########.fr       */
+/*   Updated: 2024/12/02 10:22:44 by jyniemit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /* ************************************************************************** */
@@ -30,7 +30,7 @@ void	ft_putnbr_fd(int n, int fd)
 	int		len;
 	char	*nbrstr;
 	
-	//nbrstr = ft_itoa(n); allocates memory, no go //
+	nbrstr = ft_itoa(n);
 	len = ft_strlen(nbrstr);
 	write(fd, nbrstr, len);
 }
