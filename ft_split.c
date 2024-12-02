@@ -54,8 +54,6 @@ size_t	ft_count_array_height(char const *s, char c)
 
 int	ft_safe_save(char **dest, char const *source, size_t len, int loc)
 {
-	if (!source || !dest)
-		return (1);
 	dest[loc] = ft_calloc(len, sizeof(char));
 	if (!dest[loc])
 	{
