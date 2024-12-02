@@ -29,13 +29,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*res;
 	size_t	s_len;
+	size_t	total_len;
 	
-	res = NULL;
-	s_len = 0;
 	if (!s)
 		return (NULL);
-	s_len = ft_strlen(&s[start]);
-	if (ft_strlen(s) <= start)
+	total_len = ft_strlen(s);
+	s_len = total_len - start;
+	if (start >= total_len)
 	{
 		res = malloc(1);
 		if (!res)
@@ -43,12 +43,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		res[0] = 0;
 		return (res);
 	}
-	else if (s_len > len)
-		res = malloc(sizeof(char) * (len + 1));
-	if (!res)
-		return (NULL);
 	if (s_len < len)
 		len = s_len;
+	res = malloc(sizeof(char) * (len + 1));
+	if (!res)
+		return (NULL);
 	ft_memmove(res, &s[start], len);
 	res[len] = '\0';
 	return (res);
