@@ -96,12 +96,3 @@ char	*ft_itoa(int n)
 	res = ft_int_parser(res, n, len);
 	return (res);
 }
-
-#include <stdio.h>
-
-int	main(void)
-{
-	int n = -0;
-	printf("test %d, results in |%s| \n", n, ft_itoa(n));
-	return (0);
-}
