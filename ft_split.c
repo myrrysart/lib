@@ -95,13 +95,11 @@ char	**ft_split(char const *s, char c)
 	char		**res;
 	size_t		height;
 	size_t		i;
-	char const	*pos;
 
 	res = NULL;
-	pos = s;
 	i = 0;
 	height = 0;
-	if (!pos)
+	if (!s)
 		return (NULL);
 	height = ft_count_array_height(s, c);
 	res = malloc(sizeof(char *) * (height + 1));
