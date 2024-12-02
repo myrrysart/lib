@@ -29,24 +29,18 @@ size_t	ft_count_array_height(char const *s, char c)
 {
 	size_t		i;
 	size_t		result;
-	int			count;
 
 	i = 0;
 	result = 0;
-	count= 0;
 	while (s[i])
 	{
-		count = 1;
 		while (s[i] == c && s[i])
 			i++;
-		while (s[i] != c && s[i])
+		if (s[i])
 		{
-			if (count)
-			{
-				count = 0;
-				result++;
-			}
-			i++;
+			result++;
+			while (s[i] != c && s[i])
+				i++;
 		}
 	}
 	return (result);
