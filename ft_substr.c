@@ -37,7 +37,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	s_len = ft_strlen(&s[start]);
 	if (ft_strlen(s) <= start)
 	{
-		res = ft_calloc(1, sizeof(char));
+		res = malloc(1);
+		if (!res)
+			return (NULL);
+		res[0] = 0;
 		return (res);
 	}
 	else
