@@ -43,8 +43,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		res[0] = 0;
 		return (res);
 	}
-	else
-		res = ft_calloc(len + 1, sizeof(char));
+	else if (s_len > len)
+		res = malloc(sizeof(char) * (len + 1));
 	if (!res)
 		return (NULL);
 	if (s_len < len)
