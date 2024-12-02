@@ -54,6 +54,8 @@ size_t	ft_count_array_height(char const *s, char c)
 
 int	ft_safe_save(char **dest, char const *source, size_t len, int loc)
 {
+	if (!source || !dest)
+		return (1);
 	dest[loc] = ft_calloc(len, sizeof(char));
 	if (!dest[loc])
 	{
@@ -104,7 +106,7 @@ char	**ft_split(char const *s, char c)
 	if (!pos)
 		return (NULL);
 	height = ft_count_array_height(s, c);
-	res = ft_calloc(height + 1, sizeof(char *));
+	res = malloc(sizeof(char *) * (height + 1));
 	if (!res)
 		return (NULL);
 	res[height] = NULL;
