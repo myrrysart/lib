@@ -33,9 +33,7 @@ char	*ft_strnstr(const char *hay, const char *ndl, size_t len)
 	i = 0;
 	ndl_len = 0;
 	ndl_len = ft_strlen(ndl);
-	if (!*hay)
-		return ((char *)hay);
-	if (!ndl_len)
+	if (!*hay || !ndl_len)
 		return ((char *)hay);
 	if (ndl_len > len)
 		return (NULL);
