@@ -29,14 +29,18 @@ char	*ft_strnstr(const char *hay, const char *ndl, size_t len)
 {
 	size_t	i;
 	size_t	ndl_len;
+	size_t	hay_len;
 
 	i = 0;
 	ndl_len = 0;
+	hay_len = ft_strlen(hay);
 	ndl_len = ft_strlen(ndl);
 	if (!*hay || !ndl_len)
 		return ((char *)hay);
 	if (ndl_len > len)
 		return (NULL);
+	if (len > hay_len)
+		len = hay_len;
 	while (len >= ndl_len)
 	{
 		if (ft_strncmp(&hay[i], ndl, ndl_len) == 0)
