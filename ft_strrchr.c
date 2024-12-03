@@ -29,9 +29,9 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	len;
 
 	len = ft_strlen(s);
-	if (c == 0)
+	if ((char)c == 0)
 		return ((char *)&s[len]);
-	while (len > 0 && s[len - 1] != c)
+	while (len > 0 && s[len - 1] != (char)c)
 		len--;
 	if (len)
 		return ((char *)&s[len - 1]);
