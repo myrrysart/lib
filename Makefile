@@ -48,7 +48,7 @@ re: fclean
 so: $(OBJS)
 	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
 	gcc -nostartfiles -shared -o libft.so $(OBJS)
-TEST_FILE = ft_itoa
+TEST_FILE = ft_putnbr_fd
 
 test: .test
 
