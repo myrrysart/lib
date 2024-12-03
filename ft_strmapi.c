@@ -21,3 +21,22 @@
 /*          !must allocate exact size of input string                        */
 /*          !index passed to f starts at 0                                   */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	unsigned int	offset;
+	char			*res;
+
+	offset = 0;
+	if (!s || !f)
+		return (NULL);
+	res = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!res)
+		return (NULL);
+	while (*(s++) && offset++ >= 0)
+		*(res++) = f(offset - 1, (s - offset)[offset - 1]);
+	*res = '\0';
+	return (res - offset);
+}
