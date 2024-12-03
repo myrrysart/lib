@@ -28,11 +28,9 @@ char	*ft_strchr(const char *s, int c)
 	unsigned int	i;
 
 	i = 0;
-	if (!ft_isascii(c))
-		return (NULL);
-	while (s[i] && s[i] != c)
+	while (s[i] && s[i] != (char)c)
 		i++;
-	if (s[i] == c)
+	if (s[i] == (char)c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
