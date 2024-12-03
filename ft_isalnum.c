@@ -19,6 +19,7 @@
 /*   ERROR: !undefined behavior with values outside unsigned char range       */
 /*          !implementation may vary with different locale settings          */
 /* ************************************************************************** */
+
 int	ft_isalnum(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
