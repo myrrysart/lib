@@ -27,7 +27,7 @@
 
 char	*ft_strnstr(const char *hay, const char *ndl, size_t len)
 {
-	int		i;
+	size_t	i;
 	size_t	ndl_len;
 
 	i = 0;
