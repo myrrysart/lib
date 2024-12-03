@@ -71,9 +71,9 @@ int	ft_save_strings(char **dest, char const *source, char c)
 	while (*pos)
 	{
 		len = 0;
-		while(*pos == c && *pos)
+		while (*pos == c && *pos)
 			pos++;
-		while(*pos != c && *pos)
+		while (*pos != c && *pos)
 		{
 			len++;
 			pos++;
@@ -101,7 +101,7 @@ char	**ft_split(char const *s, char c)
 	if (!res)
 		return (NULL);
 	res[height] = NULL;
-	if(ft_save_strings(res, s, c))
+	if (ft_save_strings(res, s, c))
 	{
 		free (res);
 		return (NULL);

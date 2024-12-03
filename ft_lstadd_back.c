@@ -22,4 +22,3 @@
 /*          !must traverse entire list to find end                           */
 /*          !no protection against circular lists                            */
 /* ************************************************************************** */
-

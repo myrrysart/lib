@@ -40,6 +40,7 @@ static int	ft_getlen(int n)
 	}
 	return (i);
 }
+
 static char	*ft_intmin_handler(void)
 {
 	char	*res;
@@ -72,6 +73,7 @@ static char	*ft_int_parser(char *dest, int n, int len)
 	}
 	return (dest);
 }
+
 char	*ft_itoa(int n)
 {
 	char	*res;
@@ -88,9 +90,9 @@ char	*ft_itoa(int n)
 	if (n == 0)
 	{
 		res = malloc(sizeof(char) * 2);
-		if(!res)
+		if (!res)
 			return (NULL);
-		res[0]	= '0';
+		res[0] = '0';
 		res[1] = '\0';
 		return (res);
 	}
