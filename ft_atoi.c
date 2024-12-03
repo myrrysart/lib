@@ -9,15 +9,6 @@
 /*   Updated: 2024/11/11 13:26:49 by Jyniemit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/* ************************************************************************** */
-/*   ft_atoi                                                                  */
-/* -------------------------------------------------------------------------- */
-/*   PROTO: int ft_atoi(const char *str)                                      */
-/*   PARAM: str   -> string containing number to convert                      */
-/*   RETUN: converted integer value                                           */
-/*   DESC:  converts ASCII string to integer, handling whitespace and sign    */
-/*   ERROR: !undefined behavior if str is NULL                                */
-/* ************************************************************************** */
 
 #include "libft.h"
 

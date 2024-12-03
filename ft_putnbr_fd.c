@@ -9,18 +9,6 @@
 /*   Updated: 2024/12/02 10:22:44 by jyniemit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/* ************************************************************************** */
-/*   ft_putnbr_fd                                                             */
-/* ------------------------------------------------------------------------- */
-/*   PROTO: void ft_putnbr_fd(int n, int fd)                                */
-/*   PARAM: n     -> integer to output                                       */
-/*          fd    -> file descriptor to write to                             */
-/*   RETUN: none                                                             */
-/*   DESC:  outputs integer n to given file descriptor                       */
-/*   ERROR: !no error checking on fd validity                                */
-/*          !write errors are not handled                                    */
-/*          !must handle INT_MIN specially                                   */
-/* ************************************************************************** */
 
 #include "libft.h"
 
