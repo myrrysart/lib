@@ -26,5 +26,7 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
+	if (!ft_isascii((int)c))
+		return ;
 	write(fd, &c, 1);
 }
