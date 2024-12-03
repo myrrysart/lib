@@ -78,8 +78,9 @@ int	ft_save_strings(char **dest, char const *source, char c)
 			len++;
 			pos++;
 		}
-		if (ft_safe_save(dest, pos - len, len + 1, i++))
+		if (len > 0 && ft_safe_save(dest, pos - len, len + 1, i))
 			return (1);
+		i++;
 	}
 	return (0);
 }
