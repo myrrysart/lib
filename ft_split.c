@@ -51,7 +51,7 @@ int	ft_safe_save(char **dest, char const *source, size_t len, int loc)
 	dest[loc] = malloc(sizeof(char) * len);
 	if (!dest[loc])
 	{
-		while (loc-- >= 0)
+		while (loc-- > 0)
 			free(dest[loc]);
 		return (1);
 	}
