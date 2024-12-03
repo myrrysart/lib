@@ -45,6 +45,8 @@ static char	*ft_intmin_handler(void)
 	char	*res;
 
 	res = malloc(sizeof(char) * 12);
+	if (!res)
+		return (NULL);
 	ft_strlcpy(res, "-2147483648", 12);
 	return (res);
 }
