@@ -18,7 +18,10 @@ void	ft_recursive_putnbr_helper(int n, int fd)
 		return ;
 	if (n == INT_MIN)
 	{
-		write(fd, "-2147483648", 11);
+		write(fd, "-", 1);
+		ft_recursive_putnbr_helper(-(n / 10), fd);
+		n = -(n % 10) + 48;
+		write(fd, &n, 1);
 		return ;
 	}
 	if (n < 0)
