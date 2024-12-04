@@ -20,7 +20,7 @@ static int	ft_getlen(int n)
 	if (n < 0)
 	{
 		len++;
-		n = -(n + 1);
+		n = -(n);
 	}
 	while (n > 9)
 	{
