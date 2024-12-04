@@ -64,7 +64,7 @@ Recreating C library functions.
 | Command | Description |
 |------|-------------|
 | make | Compile library |
-| make bonus | Add list functions |
+| make bonus | Add list functions (if I had any...) |
 | make clean | Remove objects |
 | make fclean | Full clean |
 | make re | Recompile |
