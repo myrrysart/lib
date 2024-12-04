@@ -14,20 +14,20 @@
 
 static int	ft_getlen(int n)
 {
-	int	i;
+	int	len;
 
-	i = 0;
+	len = 1;
 	if (n < 0)
 	{
-		i++;
-		n *= -1;
+		len++;
+		n = -(n + 1);
 	}
-	while (n != 0)
+	while (n > 9)
 	{
-		i++;
+		len++;
 		n /= 10;
 	}
-	return (i);
+	return (len);
 }
 
 static char	*ft_intmin_handler(void)
