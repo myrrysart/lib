@@ -30,14 +30,25 @@ static int	ft_getlen(int n)
 	return (len);
 }
 
-static char	*ft_intmin_handler(void)
+static char	*ft_intmin_handler(int n)
 {
 	char	*res;
+	size_t	i;
+	size_t	len;
 
-	res = malloc(sizeof(char) * 12);
+	len = ft_getlen(n / 10) + 1;
+	i = len - 1;
+	res = malloc(sizeof(char) * (len + 1));
 	if (!res)
 		return (NULL);
-	ft_strlcpy(res, "-2147483648", 12);
+	res[0] = '-';
+	res[len] = '\0';
+	while (i > 0)
+	{
+		res[i] = -(n % 10) + 48;
+		n /= 10;
+		i--;
+	}
 	return (res);
 }
 
@@ -71,7 +82,7 @@ char	*ft_itoa(int n)
 	res = NULL;
 	if (n == INT_MIN)
 	{
-		res = ft_intmin_handler();
+		res = ft_intmin_handler(n);
 		if (!res)
 			return (NULL);
 		return (res);
