@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	ft_count_array_height(char const *s, char c)
+static size_t	ft_count_array_height(char const *s, char c)
 {
 	size_t		i;
 	size_t		result;
@@ -33,7 +33,7 @@ size_t	ft_count_array_height(char const *s, char c)
 	return (result);
 }
 
-int	ft_safe_save(char **dest, char const *source, size_t len, int loc)
+static int	ft_safe_save(char **dest, char const *source, size_t len, int loc)
 {
 	dest[loc] = malloc(sizeof(char) * len);
 	if (!dest[loc])
@@ -46,7 +46,7 @@ int	ft_safe_save(char **dest, char const *source, size_t len, int loc)
 	return (0);
 }
 
-int	ft_save_strings(char **dest, char const *source, char c)
+static int	ft_save_strings(char **dest, char const *source, char c)
 {
 	char const	*pos;
 	size_t		len;
