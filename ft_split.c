@@ -6,7 +6,7 @@
 /*   By: Jyniemit <jyniemit@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 13:04:33 by Jyniemit          #+#    #+#             */
-/*   Updated: 2024/11/11 13:04:39 by Jyniemit         ###   ########.fr       */
+/*   Updated: 2025/04/28 08:43:11 by jyniemit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,10 +76,8 @@ char	**ft_split(char const *s, char c)
 {
 	char		**res;
 	size_t		height;
-	size_t		i;
 
 	res = NULL;
-	i = 0;
 	height = 0;
 	if (!s)
 		return (NULL);
